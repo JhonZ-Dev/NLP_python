@@ -30,3 +30,7 @@ print(f'\nPrecisión en el conjunto de prueba: {test_acc}')
 # Hacer predicciones en algunas imágenes de prueba
 predictions = model.predict(x_test[:5])
 print('\nPredicciones:')
+for i, prediction in enumerate(predictions):
+    predicted_label = tf.argmax(prediction).numpy()
+    true_label = tf.argmax(y_test[i]).numpy()
+    print(f'Imagen {i + 1}: Predicción={predicted_label}, Etiqueta verdadera={true_label}')
