@@ -25,3 +25,4 @@ model.compile(optimizer='adam',
 model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
 # Evaluar el modelo en el conjunto de prueba
 test_loss, test_acc = model.evaluate(x_test, y_test)
+print(f'\nPrecisión en el conjunto de prueba: {test_acc}')
