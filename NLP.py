@@ -18,3 +18,6 @@ model.add(layers.Dropout(0.2))  # Capa de dropout para regularización
 model.add(layers.Dense(10, activation='softmax'))  # Capa de salida con 10 unidades para las 10 clases y función de activación softmax
 
 # Compilar el modelo
+model.compile(optimizer='adam',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
